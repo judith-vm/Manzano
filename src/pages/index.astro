@@ -1,0 +1,85 @@
+---
+import { products } from '../../data/products.js';
+---
+
+<html>
+  <head>
+    <title>MANZANO JEWELRY</title>
+	<link rel="icon" type="image/png" href="/LOGO.png" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        padding: 0;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+      }
+
+      li {
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 16px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: #fff;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 4px;
+      }
+
+      h2 {
+        margin: 12px 0 8px;
+      }
+
+      p {
+        margin: 4px 0;
+        text-align: center;
+      }
+
+      
+      @media (max-width: 480px) {
+        body {
+          margin: 10px;
+        }
+
+        li {
+          padding: 12px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+
+	<header style="display: flex; align-items: center; gap: 12px; padding: 12px; border-bottom: 2px solid #ddd;">
+	<img src="/LOGO.png" alt="ManzanoJew Logo" width="50" style="border-radius: 8px;" />
+	<h1 style="margin: 0; font-size: 1.5rem;">MANZANO JEWELRY</h1>
+	</header>
+
+    <h1>CATALOGO</h1>
+    <ul>
+      {products.map(product => (
+        <li key={product.id}>
+          <h2>{product.name}</h2>
+          <img src={product.image} alt={product.name} />
+          <p>{product.description}</p>
+          <p><strong>Precio:</strong> ${product.price}</p>
+        </li>
+      ))}
+    </ul>
+  </body>
+</html>
