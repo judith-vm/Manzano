@@ -115,7 +115,7 @@ export const products = [
     id: 17,
     name: 'Collar Serpiente',
     description: 'Collar corto acero inoxidable color plata 42cm',
-    price: 99,
+    price: 109,
     image: '/products/CollarSerpiente.png'
   },
    {
@@ -129,7 +129,7 @@ export const products = [
     id: 19,
     name: 'Collar Corazones',
     description: 'Collar corto acero inoxidable 42cm',
-    price: 89,
+    price: 99,
     image: '/products/CollarCorazones.png'
   }
 ];
